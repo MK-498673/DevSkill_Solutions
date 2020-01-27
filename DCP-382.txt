@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Masum Khan
+ */
+class MyClass {
+
+    public static void main(String[] args) {
+
+        Scanner scn = new Scanner(System.in);
+        long n1, n2;
+        while (scn.hasNext()) {
+
+            n1 = scn.nextLong();
+            n2 = scn.nextLong();
+            if (n1 > 1 && n2 > 1) {
+                System.out.println("Even");
+                continue;
+            }if (n1 == 1 && n2 == 1) {
+                System.out.println("Even");
+            }else {
+                System.out.println("Odd");
+                
+            }
+
+        }
+    }
+}

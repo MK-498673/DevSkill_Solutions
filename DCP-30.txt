@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class CountIt {
+
+    public static void main(String arg[]) {
+
+        String str;
+        Scanner scn = new Scanner(System.in);
+
+        int testCase = scn.nextInt();
+
+        for (int i = 1; i <= testCase; i++) {
+            int arr[] = new int[26];
+            str = scn.next();
+            for (int j = 0; j < str.length(); j++) {
+                arr[(int) str.charAt(j) - 97]++;
+            }
+            System.out.println("Case " + i + ":");
+            for (int j = 0; j < 26; j++) {
+                if (arr[j] != 0) {
+                    System.out.println((char) (97 + j) + " " + arr[j]);
+                }
+            }
+        }
+    }
+}

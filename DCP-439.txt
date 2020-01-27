@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+ 
+class MyClass {
+
+       public static void main(String[] args) {
+
+              Scanner scn = new Scanner(System.in);
+
+              int tc = scn.nextInt(), cnt, len;
+              String str;
+              char c;
+
+              boolean fl = false;
+              for (int i = 1; i <= tc; i++) {
+
+                     len = scn.nextInt();
+                     str = scn.next();
+                     cnt = 0;
+                     fl = false;
+                     for (int j = 0; j < len; j++) {
+
+                            c = str.charAt(j);
+                            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+
+                                   if (fl == false) {
+                                          cnt++;
+                                          fl = true;
+
+                                   }
+                            } else {
+                                   fl = false;
+                            }
+                     }
+                     System.out.println("Case " + i + ": " + cnt);
+              }
+       }
+}

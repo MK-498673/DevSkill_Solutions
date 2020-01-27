@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Masum Khan
+ */
+class DCP_443_Boltu_vs_Balti {
+
+       public static void main(String[] args) {
+
+              Scanner scn = new Scanner(System.in);
+              int tc = scn.nextInt(),n;
+              for (int i = 1; i <= tc; i++) {
+
+                     n = scn.nextInt();
+                     System.out.print("Case "+i+"-> ");
+                     if ( n == 1 || n == 3) {
+                            System.out.println("YES;");
+
+                     }
+                     else
+                            System.out.println("NO;");
+
+              }
+       }
+}

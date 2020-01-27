@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author MasumKhan
+ */
+ class MyClass{   //DCP_321_ChangeCaseofAlphabet {
+    
+    public static void main(String[] args) {
+        
+        Scanner scn = new Scanner(System.in);
+        int tc = scn.nextInt();
+        String str ;
+        int ascii ;
+        for(int i=0;i<tc;i++){
+            
+            str=scn.next();
+            for(int j=0;j<str.length();j++){
+                
+                ascii = (int)str.charAt(j);
+                //System.out.println(ascii);
+                if(ascii<91 ){         
+                    System.out.printf("%c",(char)ascii+32);
+                }      
+                else
+                    System.out.printf("%c",(char)ascii-32);
+                    
+            }
+            System.out.println("");
+        }
+    }
+}

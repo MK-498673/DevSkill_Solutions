@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+class CommonString {
+
+    public static void main(String args[]) {
+
+        Scanner scn = new Scanner(System.in);
+        int testCase;
+        String str, str2;
+        testCase = scn.nextInt();
+        for (int i = 1; i <= testCase; i++) {
+            str = scn.next();
+            str2 = scn.next();
+            int com[][] = new int[str.length() + 1][str2.length() + 1];
+            int j, k, c = 0, r = 0, temp = 0;
+            for (j = 0; j < str.length(); j++) {
+                for (k = 0; k < str2.length(); k++) {
+
+                    if (str.charAt(j) == str2.charAt(k)) {
+                        com[j + 1][k + 1] = com[j][k] + 1;
+                        if (temp < com[j][k] + 1) {
+//                            r = j+1;   c = k+1;                     
+                            temp = com[j][k] + 1;
+                        }
+                    } else {
+                        com[j + 1][k + 1] = 0;
+                    }
+                }
+            }
+            System.out.println("Case " + i + ": " + temp);
+//            for(j=c-temp;temp>0;j++){
+//                System.out.println(str2.charAt(j));  temp--;
+
+//            }           
+        }
+    }
+}

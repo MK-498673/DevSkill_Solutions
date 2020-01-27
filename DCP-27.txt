@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+class IsItPrime {
+
+    public static void main(String arg[]){
+        
+        int arr[] = new int [10001] ;
+        Scanner scn = new Scanner(System.in);
+        int testCase= scn.nextInt();
+        
+        for(int i=0;i<testCase;i++){
+            
+            for(int j=2;j<=Math.sqrt(10000);j++){            
+                for(int k=2;j*k<=10000;k++){
+                    arr[j*k] = 1;
+                }
+            }
+            arr[0]=1 ;
+            arr[1] =1;
+            int num = scn.nextInt();
+            if(arr[num]==0)
+                System.out.println("Yes");
+            else
+                System.out.println("No");           
+        } 
+    }
+}

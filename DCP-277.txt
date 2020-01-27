@@ -1,0 +1,30 @@
+/* package whatever; // don't place package name! */
+
+import java.util.Scanner;
+
+  class DCP_277{
+
+    public static void main(String args[]) {
+
+        Scanner scn = new Scanner(System.in);
+        int tc = scn.nextInt(), r, c;
+        long  result;
+
+        for (int i = 1; i <= tc; i++) {
+            //result =1;
+            result=0;
+            r = scn.nextInt();
+            c = scn.nextInt();
+            while (r!=1 && c != 1) {
+                result += r * c;
+                
+                r--;c--;
+                      
+            }
+            result+= r*c;
+            System.out.println("Case "+i+": "+result*15);
+
+        }
+
+    }
+}

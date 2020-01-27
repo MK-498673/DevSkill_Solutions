@@ -1,0 +1,25 @@
+#define ONLINE_JUDGE 1
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, b, s, g, r, sum ;
+    int mx = -99999;
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cin>>b>>s>>g>>r;
+        sum = b;
+        sum+=(s*3);
+        sum+=(g*10);
+        sum-=(r*5);
+        if(mx<sum)
+            mx = sum;
+        if(sum<0)
+            sum = 0;
+        printf("Player %d: %d\n",i, sum);
+    }
+    printf("High Score = %d\n", mx);
+}

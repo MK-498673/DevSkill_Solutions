@@ -1,0 +1,34 @@
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Masum Khan
+ */
+class MyClass {
+
+    public static void main(String[] args) {
+
+        Scanner scn = new Scanner(System.in);
+        int tc = scn.nextInt(), j, i;
+        BigInteger n, x = new BigInteger("5");
+        for (i = 0; i < tc; i++) {
+
+            n = scn.nextBigInteger();
+            j = 0;
+            while (true) {
+
+                if (x.pow(j).compareTo(n) == 0) {
+                    System.out.println("YES");
+                    break;
+                }
+                if (x.pow(j).compareTo(n) == 1) {
+                    System.out.println("NO");
+                    break;
+                }
+                j++;
+            }
+        }
+    }
+}

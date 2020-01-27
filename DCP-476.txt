@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Masum Khan
+ */
+class DCP_476_SubmissionVerdict {
+
+       public static void main(String args[]) {
+
+              Scanner scn = new Scanner(System.in);
+              int tc = scn.nextInt();
+              String str;
+              for (int i = 0; i < tc; i++) {
+
+                     str = scn.next();
+                     if (str.equals("ac")) {
+                            System.out.println("Accepted");
+                     }
+
+                     if (str.equals("wa")) {
+                            System.out.println("Wrong Answer");
+                     }
+                     if (str.equals("tle")) {
+                            System.out.println("Time Limit Exceeded");
+                     }
+                     if (str.equals("rte")) {
+                            System.out.println("Run Time Error");
+                     }
+              }
+       }
+}

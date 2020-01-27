@@ -1,0 +1,52 @@
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Masum Khan
+ */
+class MyClass {
+
+    public static void main(String[] args) {
+
+        int i, j, ind = 0;
+        long arr[] = new long[10];
+        Scanner scn = new Scanner(System.in);
+        long l;
+        long l2, l3;
+        while (scn.hasNext()) {
+
+            int e = scn.nextInt();
+            int n = scn.nextInt();
+            l = 9223372036854775807l;
+            for (i = 0; i < n; i++) {
+                arr[i] = scn.nextLong();
+                if (l > arr[i]) {
+                    l = arr[i];
+                    ind = i;
+                }
+            }
+            l2 = arr[n - ind - 1];
+            l = arr[ind];
+            //System.out.println("l > " + l);
+            //System.out.println("l2 > " + l2);
+            //System.out.println("");
+            while (l2 % l != 0) {
+
+                l3 = l;
+                l = l2 % l;
+                l2 = l3;
+                //System.out.println(l + " " + l2);
+            }
+            for(i=0;i<n;i++)
+            {
+                e-=arr[i]/l;
+            }
+            System.out.println("Output: "+e);
+
+        }
+
+    }
+}
+
+
